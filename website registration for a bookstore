@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookstore Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f6f6f6; margin: 0; padding: 0; }
+    .container { max-width: 400px; margin: 60px auto; padding: 32px; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);}
+    h2 { text-align: center; margin-bottom: 24px; }
+    form label { display: block; margin-bottom: 8px; font-weight: 600;}
+    form input { width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px;}
+    button { width: 100%; background: #4a90e2; color: #fff; border: none; padding: 12px; border-radius: 4px; font-size: 16px; cursor: pointer;}
+    button:hover { background: #357abd;}
+    .success { color: green; text-align: center; margin-top: 16px;}
+    .error { color: red; text-align: center; margin-top: 16px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bookstore Registration</h2>
+    <form id="registrationForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required minlength="6">
+
+      <button type="submit">Register</button>
+      <div id="message"></div>
+    </form>
+  </div>
+  <script>
+    const form = document.getElementById('registrationForm');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // For demonstration, just show a success message.
+      // In a real app, you would send this data to a backend API.
+      message.textContent = 'Registration successful!';
+      message.className = 'success';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
