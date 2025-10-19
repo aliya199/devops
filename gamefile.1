@@ -1,0 +1,35 @@
+# Subway-Surfers-like Endless Runner (Java, Swing)
+
+A simple 2D endless-runner prototype written in plain Java and Swing. This project is a minimal, self-contained starting point for building a Subway Surfers–style game.
+
+Features
+- 3 lanes (left, center, right)
+- Switch lanes (Left/Right arrows)
+- Jump (Up arrow or Space)
+- Obstacles and coins spawn and move toward the player
+- Score, high speed progression, basic collision detection
+- No external libraries required — runs on any standard JDK
+
+How to run
+1. Make sure you have JDK 11+ installed.
+2. Compile:
+   - From project root:
+     javac -d out src/main/java/com/aliya199/subwaysim/*.java
+3. Run:
+   - java -cp out com.aliya199.subwaysim.Main
+
+Or import the `src` folder into your IDE (IntelliJ IDEA, Eclipse) and run `Main`.
+
+What I did
+- Added a runnable Swing-based game core (game loop + rendering).
+- Implemented player controls, spawning, and basic collision handling.
+- Provided a simple, extensible code structure so you can add graphics, sounds, and tile/level systems.
+
+What's next
+- Replace placeholders with sprite art and animations.
+- Add particle effects, sound effects, and music.
+- Improve physics (smooth acceleration, gravity tuning), and add power-ups.
+- Add menus, pause/resume, and a persistent high-score file.
+
+License
+- MIT (adapt as needed)
